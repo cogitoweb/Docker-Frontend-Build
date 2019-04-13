@@ -7,7 +7,10 @@ RUN apt-get update && apt-get install -y \
 	unzip \
 	gnupg
 
-# RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && bash nodesource_setup.sh && rm nodesource_setup.sh && apt-get update
+RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && \
+	bash nodesource_setup.sh && \
+	rm nodesource_setup.sh && \
+	apt-get update
 
 RUN apt-get install -y \
 	nodejs \
@@ -20,7 +23,6 @@ RUN apt-get install -y \
 	sass \
 	webpack \
 	@angular/cli
-# npm
 
 # Clear all the caches
 RUN rm -R /var/lib/apt/lists && npm cache clean --force
