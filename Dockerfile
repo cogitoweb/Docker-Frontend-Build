@@ -14,7 +14,6 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh && \
 
 RUN apt-get install -y \
 	nodejs \
-	npm \
 	&& npm install -g \
 	bower \
 	gulp \
